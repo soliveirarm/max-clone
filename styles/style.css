@@ -130,6 +130,7 @@ main .prices {
   align-items: center;
   background-image: linear-gradient(to bottom, #002be7, #060f52);
   color: #fff;
+  text-align: center;
 }
 main .prices__title {
   margin-top: 10rem;
@@ -165,9 +166,6 @@ main .prices__option {
   background-color: #fff;
   color: #000066;
   padding: 1.5rem 3rem;
-  min-height: 400px;
-  max-width: 400px;
-  width: 100%;
 }
 main .prices__option .line {
   text-align: center;

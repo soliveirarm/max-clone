@@ -176,6 +176,7 @@ main {
     align-items: center;
     background-image: linear-gradient(to bottom, $accent, #060f52);
     color: #fff;
+    text-align: center;
 
     &__title {
       margin-top: 10rem;
@@ -185,7 +186,6 @@ main {
 
     &__buttons {
       background-color: #2648df;
-      // padding: 1rem;
       border-radius: 30rem;
     }
 
@@ -218,9 +218,6 @@ main {
       background-color: #fff;
       color: #000066;
       padding: 1.5rem 3rem;
-      min-height: 400px;
-      max-width: 400px;
-      width: 100%;
 
       .line {
         text-align: center;
