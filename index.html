@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max - Clone</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/a14430386d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="img/logo.svg" alt="White max logo" />
+        <div class="buttons">
+          <button class="btn btn--transparent" id="login">Entrar</button>
+          <button class="btn btn--blue" id="sign-up">Assine Agora</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <h1 class="title">Chegou!</h1>
+        <img src="img/logo.svg" alt="" class="logo" />
+        <h2 class="subtitle">MUITO MAIS A VER</h2>
+        <h3 class="price-info">Planos a partir de <b>R$18,90 / mês</b></h3>
+        <button class="btn btn--blue" id="sign-up">Assine Agora</button>
+        <img class="wave" src="img/wave.svg" alt="" />
+      </section>
+
+      <section class="movie-catalog">
+        <p class="description">
+          Muito mais a ver. Conheça nossa plataforma aprimorada e não perca
+          todos os seus favoritos e as melhores estreias, só aqui.
+        </p>
+
+        <div class="movie-catalog__gallery">
+          <div class="movie-catalog__movie">
+            <img
+              src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/13FD/production/_99171150_peppapigpa.jpg"
+              alt=""
+            />
+            <p class="movie-catalog__category">CRIANÇAS E FAMÍLIA</p>
+            <p class="movie-catalog__title">PEPPA PIG</p>
+          </div>
+          <div class="movie-catalog__movie">
+            <img
+              src="https://conteudo.imguol.com.br/c/splash/2f/2022/10/21/luis-1666369667196_v2_450x253.jpg"
+              alt=""
+            />
+            <p class="movie-catalog__category">REALITY</p>
+            <p class="movie-catalog__title">LARGADOS E PELADOS</p>
+          </div>
+          <div class="movie-catalog__movie">
+            <img
+              src="https://sobresagas.com.br/wp-content/uploads/2022/09/sera-isso-amor-quando-os-proximos-episodios-da-2a-temporada-serao-lancados-na-hbo-max.png"
+              alt=""
+            />
+            <p class="movie-catalog__category">NOVELAS</p>
+            <p class="movie-catalog__title">SERÁ ISSO AMOR?</p>
+          </div>
+          <div class="movie-catalog__movie">
+            <img
+              src="https://s2-g1.glbimg.com/cnA5tbhE8NuAcjUxYlEcZB1zLJY=/0x0:1920x1080/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/n/u/YmN22TRcORN1fU8ACzwA/aquaman-2-foto1.jpg"
+              alt=""
+            />
+            <p class="movie-catalog__category">FILMES</p>
+            <p class="movie-catalog__title">AQUAMAN 2 O REINO PERDIDO</p>
+          </div>
+          <div class="movie-catalog__movie">
+            <img
+              src="https://t.ctcdn.com.br/xwo8T6t05Yk13KsMm_ixdwb1I-M=/640x360/smart/i641301.jpeg"
+              alt=""
+            />
+            <p class="movie-catalog__category">DRAMA</p>
+            <p class="movie-catalog__title">A CASA DO DRAGÃO</p>
+          </div>
+          <div class="movie-catalog__movie">
+            <img
+              src="https://apostas.gazetaesportiva.com/static/wp/imagem-destaque-champions-league.webp"
+              alt=""
+            />
+            <p class="movie-catalog__category">FUTEBOL</p>
+            <p class="movie-catalog__title">CHAMPIONS LEAGUE</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="prices">
+        <h2 class="prices__title">Escolha o melhor plano para você</h2>
+
+        <section class="prices__buttons">
+          <button
+            class="prices__button selected btn btn--transparent"
+            id="monthly"
+          >
+            Mensal
+          </button>
+          <button class="prices__button btn btn--transparent" id="monthly">
+            Anual Parcelado
+          </button>
+        </section>
+
+        <section class="prices__options">
+          <div class="prices__option">
+            <h3>Básico com Anúncios</h3>
+            <span class="line"></span>
+
+            <ul>
+              <li class="icon-check">
+                <strong>2 dispositivos</strong> ao mesmo tempo
+              </li>
+              <li class="icon-tv">Resolução <strong>Full HD</strong></li>
+            </ul>
+
+            <h4 class="prices__price">R$29,90<em>/mês</em></h4>
+            <button class="btn btn--blue">Escolha seu plano</button>
+          </div>
+
+          <div class="prices__option">
+            <h3>Standard</h3>
+            <span class="line"></span>
+
+            <ul>
+              <li class="icon-check">
+                <strong>2 dispositivos</strong> ao mesmo tempo
+              </li>
+              <li class="icon-tv">Resolução <strong>Full HD</strong></li>
+              <li class="icon-download">
+                <strong>30 downloads</strong> para curtir off-line
+              </li>
+            </ul>
+
+            <h4 class="prices__price">R$39,90<em>/mês</em></h4>
+            <button class="btn btn--blue">Escolha seu plano</button>
+          </div>
+
+          <div class="prices__option">
+            <h3>Platinum</h3>
+            <span class="line"></span>
+
+            <ul>
+              <li class="icon-check">
+                <strong>4 dispositivos</strong> ao mesmo tempo
+              </li>
+              <li class="icon-tv">
+                Resolução <strong>Full HD e 4k Ultra HD</strong>
+              </li>
+              <li class="icon-headphones">
+                Áudio <strong>Dolby Atmos</strong>
+              </li>
+              <li class="icon-download">
+                <strong>100 downloads</strong> para curtir off-line
+              </li>
+            </ul>
+
+            <h4 class="prices__price">R$55,90<em>/mês</em></h4>
+            <button class="btn btn--blue">Escolha seu plano</button>
+          </div>
+        </section>
+
+        <p class="font-sm">
+          *Full HD, 4K Ultra HD e Dolby Atmos não estão disponíveis em todo o
+          conteúdo de cada plano. O conteúdo ao vivo nos planos Standard e
+          Platinum pode conter anúncios.Downloads podem ter restrições em
+          algumas categorias de conteúdo. Saiba mais em:
+          <a href="#">help.max.com/plans</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

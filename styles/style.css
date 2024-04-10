@@ -1,0 +1,281 @@
+.flex-column, main .prices__option, main .prices, main .movie-catalog__movie {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body,
+nav {
+  background-color: #020208;
+}
+
+header .logo {
+  width: 100px;
+}
+
+nav {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  height: 95vh;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background-image: url("https://images.unsplash.com/photo-1615986201152-7686a4867f30?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+main .welcome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgb(0, 16, 88) 15%, rgba(0, 0, 0, 0) 50%);
+  z-index: -1;
+}
+main .wave {
+  position: absolute;
+  bottom: 0;
+}
+main .title {
+  font-size: 2.5rem;
+}
+main .subtitle {
+  font-size: 2rem;
+}
+main .price-info {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main .btn {
+  padding: 1rem 1.5rem;
+}
+main .logo {
+  width: 400px;
+}
+main .movie-catalog {
+  color: #fff;
+  background-color: #002be7;
+  text-align: center;
+}
+main .movie-catalog .description {
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  padding: 0 3rem;
+}
+main .movie-catalog__gallery {
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+}
+main .movie-catalog__gallery > div {
+  border: 1px solid #002be7;
+}
+main .movie-catalog__gallery img {
+  max-width: 420px;
+  height: 700px;
+  object-fit: cover;
+}
+main .movie-catalog__movie {
+  position: relative;
+}
+main .movie-catalog__movie::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(2, 43, 231, 0) 60%, rgb(2, 43, 231) 95%);
+  z-index: 0;
+}
+main .movie-catalog__category, main .movie-catalog__title {
+  z-index: 2;
+}
+main .movie-catalog__category {
+  font-weight: 600;
+}
+main .movie-catalog__title {
+  color: #b9c2e7;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+main .prices {
+  align-items: center;
+  background-image: linear-gradient(to bottom, #002be7, #060f52);
+  color: #fff;
+}
+main .prices__title {
+  margin-top: 10rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+main .prices__buttons {
+  background-color: #2648df;
+  border-radius: 30rem;
+}
+main .prices__button {
+  border-radius: 28rem;
+  margin: 0.25rem;
+  letter-spacing: 1px;
+  padding: 0.7rem;
+  min-width: 200px;
+  transition: ease 300ms;
+}
+main .prices__button.selected {
+  background-color: #fff;
+  color: #000;
+}
+main .prices__options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+main .prices__option {
+  align-items: start;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  color: #000066;
+  padding: 1.5rem 3rem;
+  min-height: 400px;
+  max-width: 400px;
+  width: 100%;
+}
+main .prices__option .line {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #c4c5c2;
+}
+main .prices__option h3 {
+  align-self: start;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+main .prices__option button {
+  align-self: center;
+}
+main .prices__option ul {
+  list-style-type: none;
+}
+main .prices__option li {
+  position: relative;
+  font-size: 0.9rem;
+  padding: 0.25rem;
+  line-height: 1.5;
+}
+main .prices__price {
+  align-self: center;
+  margin-top: 5rem;
+  padding: 1rem;
+  font-size: 1.9rem;
+}
+main .prices__price em {
+  color: #7f7f7f;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-style: normal;
+}
+
+.font-sm {
+  font-size: 0.75rem;
+  color: #c1c3ba;
+  max-width: 640px;
+  line-height: 1.5;
+}
+.font-sm a {
+  color: #3e8be9;
+  text-decoration: none;
+}
+.font-sm a:hover {
+  text-decoration: underline;
+}
+
+.icon-check::before {
+  content: "\f00c";
+  color: #4066ff;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 0.25rem;
+  padding: 0 0.25rem;
+}
+
+.icon-tv::before {
+  content: "\f26c";
+  color: #4066ff;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 0.25rem;
+  padding: 0 0.25rem;
+  font-size: 0.7rem;
+}
+
+.icon-download::before {
+  content: "\f019";
+  color: #4066ff;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 0.25rem;
+  padding: 0 0.25rem;
+}
+
+.icon-headphones::before {
+  content: "\f025";
+  color: #4066ff;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 0.25rem;
+  padding: 0 0.25rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+.btn--blue {
+  background-color: #002be7;
+}
+.btn--blue:hover {
+  transform: scale(1.05);
+  background-color: #0022b4;
+}
+.btn--transparent {
+  background-color: transparent;
+}
+.btn--transparent:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*# sourceMappingURL=style.css.map */
