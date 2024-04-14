@@ -39,7 +39,7 @@
       </section>
 
       <section class="movie-catalog">
-        <p class="description">
+        <p class="movie-catalog__description">
           Muito mais a ver. Conheça nossa plataforma aprimorada e não perca
           todos os seus favoritos e as melhores estreias, só aqui.
         </p>
@@ -101,12 +101,15 @@
 
         <section class="prices__buttons">
           <button
-            class="prices__button selected btn btn--transparent"
+            class="prices__button pressed btn btn--transparent btn--round"
             id="monthly"
           >
             Mensal
           </button>
-          <button class="prices__button btn btn--transparent" id="monthly">
+          <button
+            class="prices__button btn btn--transparent btn--round"
+            id="yearly"
+          >
             Anual Parcelado
           </button>
         </section>
@@ -125,8 +128,9 @@
               </ul>
             </div>
 
-            <div class="self-center">
-              <h4 class="prices__price">R$29,90<em>/mês</em></h4>
+            <div class="prices__price-container self-center">
+              <h4 class="prices__price">R$29,90</h4>
+              <p></p>
               <button class="btn btn--blue">Escolha seu plano</button>
             </div>
           </div>
@@ -147,8 +151,9 @@
               </ul>
             </div>
 
-            <div class="self-center">
-              <h4 class="prices__price">R$39,90<em>/mês</em></h4>
+            <div class="prices__price-container self-center">
+              <h4 class="prices__price">R$39,90</h4>
+              <p></p>
               <button class="btn btn--blue">Escolha seu plano</button>
             </div>
           </div>
@@ -174,8 +179,9 @@
               </ul>
             </div>
 
-            <div class="self-center">
-              <h4 class="prices__price">R$55,90<em>/mês</em></h4>
+            <div class="prices__price-container self-center">
+              <h4 class="prices__price">R$55,90</h4>
+              <p></p>
               <button class="btn btn--blue">Escolha seu plano</button>
             </div>
           </div>
@@ -190,5 +196,7 @@
         </p>
       </section>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
