@@ -1,7 +1,11 @@
-.flex-column, main .prices__option, main .prices, main .movie-catalog__movie {
+.flex-column, main .prices__option, main .prices, main .movie-catalog__movie, .justify-between {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 button {
@@ -21,7 +25,7 @@ nav {
 }
 
 header .logo {
-  width: 100px;
+  max-width: 100px;
 }
 
 nav {
@@ -29,14 +33,16 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 main .welcome {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
-  justify-content: center;
   height: 95vh;
   position: relative;
   z-index: 1;
@@ -44,6 +50,8 @@ main .welcome {
   background-image: url("https://images.unsplash.com/photo-1615986201152-7686a4867f30?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
+  padding: 1.5rem;
+  text-align: center;
 }
 main .welcome::before {
   content: "";
@@ -75,7 +83,8 @@ main .btn {
   padding: 1rem 1.5rem;
 }
 main .logo {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
 }
 main .movie-catalog {
   color: #fff;
@@ -159,20 +168,24 @@ main .prices__options {
   justify-content: center;
   gap: 2rem;
   padding: 1rem;
+  width: 100%;
 }
 main .prices__option {
+  justify-content: space-between;
   align-items: start;
+  min-height: 400px;
+  flex-basis: 400px;
   border-radius: 0.25rem;
   background-color: #fff;
   color: #000066;
-  padding: 1.5rem 3rem;
-}
-main .prices__option .line {
-  text-align: center;
-  width: 100%;
-  border-bottom: 1px solid #c4c5c2;
+  padding: 1.5rem 2rem;
+  position: relative;
 }
 main .prices__option h3 {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
   align-self: start;
   font-size: 1.6rem;
   letter-spacing: 0.5px;
@@ -182,9 +195,11 @@ main .prices__option button {
   align-self: center;
 }
 main .prices__option ul {
+  align-self: start;
   list-style-type: none;
 }
 main .prices__option li {
+  text-align-last: left;
   position: relative;
   font-size: 0.9rem;
   padding: 0.25rem;
@@ -192,7 +207,6 @@ main .prices__option li {
 }
 main .prices__price {
   align-self: center;
-  margin-top: 5rem;
   padding: 1rem;
   font-size: 1.9rem;
 }
@@ -255,7 +269,7 @@ main .prices__price em {
 }
 
 .btn {
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 1.25rem;
   border-radius: 0.5rem;
   border: none;
   text-transform: uppercase;
@@ -276,4 +290,20 @@ main .prices__price em {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/*# sourceMappingURL=style.css.map */
+.self-center {
+  align-self: center;
+}
+
+.line {
+  display: block;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #c4c5c2;
+  margin-bottom: 1rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
