@@ -1,0 +1,19 @@
+@import "../utilities/vars";
+@import "../utilities/mixins";
+
+.icon-check::before {
+  @include icon("\f00c");
+}
+
+.icon-tv::before {
+  @include icon("\f26c");
+  font-size: 0.7rem;
+}
+
+.icon-download::before {
+  @include icon("\f019");
+}
+
+.icon-headphones::before {
+  @include icon("\f025");
+}

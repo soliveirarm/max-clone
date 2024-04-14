@@ -1,37 +1,13 @@
-$dark: #020208;
-$accent: #002be7;
-$accent-icon: #4066ff;
-$text-muted: #b9c2e7;
-
-@mixin icon($icon) {
-  content: $icon;
-  color: $accent-icon;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  margin-right: 0.25rem;
-  padding: 0 0.25rem;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.justify-between {
-  @extend .flex-column;
-  justify-content: space-between;
-}
-
-button {
-  cursor: pointer;
-}
+@import "./components/icons";
+@import "./components/welcome";
+@import "./components/movie-catalog";
+@import "./components/prices";
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body,
@@ -43,248 +19,26 @@ header {
   .logo {
     max-width: 100px;
   }
+
+  .btn {
+    padding: 0.7rem 1.25rem;
+  }
 }
 
 nav {
-  padding: 0.5rem 1rem;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
-}
-
-main {
-  .welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    height: 95vh;
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    background-image: url("https://images.unsplash.com/photo-1615986201152-7686a4867f30?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: darken;
-    padding: 1.5rem;
-    text-align: center;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        0deg,
-        rgb(0 16 88) 15%,
-        rgba(0, 0, 0, 0) 50%
-      );
-      z-index: -1;
-    }
-  }
-
-  .wave {
-    position: absolute;
-    bottom: 0;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 2rem;
-  }
-
-  .price-info {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-
-  .btn {
-    padding: 1rem 1.5rem;
-  }
-
-  .logo {
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .movie-catalog {
-    color: #fff;
-    background-color: $accent;
-    text-align: center;
-
-    .description {
-      margin: 0 auto;
-      line-height: 1.5;
-      font-size: 2rem;
-      margin-bottom: 6rem;
-      padding: 0 3rem;
-    }
-
-    &__gallery {
-      display: flex;
-      justify-content: center;
-      overflow-x: scroll;
-
-      & > div {
-        border: 1px solid $accent;
-      }
-
-      img {
-        max-width: 420px;
-        height: 700px;
-        object-fit: cover;
-      }
-    }
-
-    &__movie {
-      @extend .flex-column;
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(
-          180deg,
-          rgba(2, 43, 231, 0) 60%,
-          rgba(2, 43, 231, 1) 95%
-        );
-        z-index: 0;
-      }
-    }
-
-    &__category,
-    &__title {
-      z-index: 2;
-    }
-
-    &__category {
-      font-weight: 600;
-    }
-
-    &__title {
-      color: $text-muted;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 0.8rem;
-      margin-bottom: 1rem;
-    }
-  }
-
-  .prices {
-    @extend .flex-column;
-    align-items: center;
-    background-image: linear-gradient(to bottom, $accent, #060f52);
-    color: #fff;
-    text-align: center;
-
-    &__title {
-      margin-top: 10rem;
-      text-transform: uppercase;
-      font-size: 2rem;
-    }
-
-    &__buttons {
-      background-color: #2648df;
-      border-radius: 30rem;
-    }
-
-    &__button {
-      border-radius: 28rem;
-      margin: 0.25rem;
-      letter-spacing: 1px;
-      padding: 0.7rem;
-      min-width: 200px;
-      transition: ease 300ms;
-
-      &.selected {
-        background-color: #fff;
-        color: #000;
-      }
-    }
-
-    &__options {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-
-      width: 100%;
-    }
-
-    &__option {
-      @extend .flex-column;
-      justify-content: space-between;
-      align-items: start;
-      min-height: 400px;
-      flex-basis: 400px;
-      border-radius: 0.25rem;
-      background-color: #fff;
-      color: #000066;
-      padding: 1.5rem 2rem;
-      position: relative;
-
-      h3 {
-        // border-bottom: 1px solid #c4c5c2;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 1rem;
-        padding: 0.5rem 0;
-        align-self: start;
-        font-size: 1.6rem;
-        letter-spacing: 0.5px;
-        font-weight: 600;
-      }
-
-      button {
-        align-self: center;
-      }
-
-      ul {
-        align-self: start;
-        list-style-type: none;
-      }
-
-      li {
-        text-align-last: left;
-        position: relative;
-        font-size: 0.9rem;
-        padding: 0.25rem;
-        line-height: 1.5;
-      }
-    }
-
-    &__price {
-      align-self: center;
-      padding: 1rem;
-      font-size: 1.9rem;
-
-      em {
-        color: #7f7f7f;
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-        font-style: normal;
-      }
-    }
-  }
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
 
 .font-sm {
-  font-size: 0.75rem;
   color: #c1c3ba;
-  max-width: 640px;
+  font-size: 0.75rem;
   line-height: 1.5;
+  max-width: 640px;
 
   a {
     color: #3e8be9;
@@ -296,46 +50,35 @@ main {
   }
 }
 
-.icon-check::before {
-  @include icon("\f00c");
-}
-
-.icon-tv::before {
-  @include icon("\f26c");
-  font-size: 0.7rem;
-}
-
-.icon-download::before {
-  @include icon("\f019");
-}
-
-.icon-headphones::before {
-  @include icon("\f025");
-}
-
 .btn {
-  padding: 0.7rem 1.25rem;
   border-radius: 0.5rem;
   border: none;
-  text-transform: uppercase;
-  font-weight: bold;
   color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
 
   &--blue {
     background-color: $accent;
 
     &:hover {
-      transform: scale(1.05);
       background-color: darken($accent, 10%);
+      transform: scale(1.05);
     }
   }
 
   &--transparent {
     background-color: transparent;
+    padding: 0.7rem 1.25rem;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.2);
     }
+  }
+
+  &--round {
+    border-radius: 30rem;
   }
 }
 
@@ -344,11 +87,11 @@ main {
 }
 
 .line {
+  border-bottom: 1px solid #c4c5c2;
   display: block;
+  margin-bottom: 1rem;
   text-align: center;
   width: 100%;
-  border-bottom: 1px solid #c4c5c2;
-  margin-bottom: 1rem;
 }
 
 .w-100 {

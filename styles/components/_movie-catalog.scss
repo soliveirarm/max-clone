@@ -1,0 +1,66 @@
+@import "../utilities/vars";
+
+.movie-catalog {
+  background-color: $accent;
+  color: #fff;
+  text-align: center;
+
+  &__description {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 6rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+
+    & > div {
+      border: 1px solid $accent;
+    }
+
+    img {
+      height: 700px;
+      max-width: 420px;
+      object-fit: cover;
+    }
+  }
+
+  &__movie {
+    @include flex-column();
+    position: relative;
+
+    &::after {
+      background-image: linear-gradient(
+        180deg,
+        rgba(2, 43, 231, 0) 60%,
+        rgba(2, 43, 231, 1) 95%
+      );
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+
+  &__category,
+  &__title {
+    z-index: 2;
+  }
+
+  &__category {
+    font-weight: 600;
+  }
+
+  &__title {
+    color: $text-muted;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+}

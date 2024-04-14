@@ -1,0 +1,109 @@
+@import "../utilities/mixins";
+
+.prices {
+  @include flex-column();
+  align-items: center;
+  background-image: linear-gradient(to bottom, $accent, #060f52);
+  color: #fff;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+    margin-top: 10rem;
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    background-color: #2648df;
+    border-radius: 30rem;
+  }
+
+  &__button {
+    letter-spacing: 1px;
+    margin: 0.25rem;
+    padding: 0.7rem 1.5rem;
+    transition: ease 300ms;
+
+    &.pressed {
+      background-color: #fff;
+      color: #000;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  &__option {
+    @include flex-column();
+    align-items: start;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    color: #000066;
+    flex-basis: 400px;
+    justify-content: space-between;
+    min-height: 400px;
+    padding: 1.5rem 2rem;
+    position: relative;
+
+    h3 {
+      align-self: start;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      padding: 0.5rem 0;
+      text-align: left;
+      width: 100%;
+    }
+
+    button {
+      align-self: center;
+    }
+
+    ul {
+      align-self: start;
+      list-style-type: none;
+    }
+
+    li {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding: 0.25rem;
+      position: relative;
+      text-align-last: left;
+    }
+  }
+
+  &__price-container {
+    @include flex-column(0.5rem);
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
+
+  &__price {
+    align-self: center;
+    font-size: 1.9rem;
+
+    &::after {
+      color: #7f7f7f;
+      content: "/mês";
+      font-size: 1.2rem;
+      font-style: normal;
+      letter-spacing: 2px;
+    }
+  }
+}
